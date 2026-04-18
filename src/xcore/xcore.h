@@ -93,6 +93,7 @@ enum class ResourceKind {
 	Style,
 	Keymap,
 	Gamepad,
+	Boot,     // TRDOS boot loader blobs (e.g. boot.$B)
 	COUNT
 };
 
@@ -696,7 +697,6 @@ struct xConfig {
 		}
 
 		fs::path prfDir;
-		fs::path boot;
 		fs::path cacheDir;   // $XDG_CACHE_HOME/samstyle/xpeccy — UI dock state and other
 		                     // derived, non-essential artifacts
 		fs::path stateDir;   // $XDG_STATE_HOME/samstyle/xpeccy — persistent machine-
